@@ -5,6 +5,50 @@
 
 <%@ include file = "../includes/header.jsp"%>
 
+<style>
+        .popup-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .popup-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .popup-content {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            z-index: 1;
+            
+        }
+
+        .popup-content button {
+            margin-top: 10px;
+            padding: 8px 16px;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+
     <!-- Breadcrumb Start -->
     <div class="container-fluid">
         <div class="row px-xl-5">
@@ -177,7 +221,7 @@
                                 <label class="custom-control-label" for="banktransfer">무통장 입금</label>
                             </div>
                         </div>
-                        <button class="btn btn-block btn-primary font-weight-bold py-3">결제하기</button>
+                        <button class="btn btn-block btn-primary font-weight-bold py-3" id="paymentButton">결제하기</button>
                     </div>
                 </div>
             </div>
@@ -185,5 +229,47 @@
     </div>
     <!-- Checkout End -->
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    // 결제하기 버튼을 클릭할 때 팝업을 열도록 이벤트를 추가합니다.
+    document.getElementById("paymentButton").addEventListener("click", function () {
+        openPopup();
+    });
+
+    // 팝업 창을 열기 위한 함수입니다.
+    function openPopup() {
+        // 팝업 창에 표시할 내용을 작성합니다.
+        var popupContent = "<p>결제가 완료 되었습니다</p>";
+
+        // 동적으로 HTML 요소를 생성합니다.
+        var popupContainer = document.createElement("div");
+        var popupOverlay = document.createElement("div");
+        var popupContentDiv = document.createElement("div");
+        var closeButton = document.createElement("button");
+
+        // 생성된 요소에 속성과 내용을 추가합니다.
+        popupContainer.className = "popup-container";
+        popupOverlay.className = "popup-overlay";
+        popupContentDiv.className = "popup-content";
+        closeButton.textContent = "닫기";
+
+        // 팝업 창에 내용을 삽입합니다.
+        popupContentDiv.innerHTML = popupContent;
+
+        // 생성된 요소들을 팝업 창에 추가합니다.
+        popupContainer.appendChild(popupOverlay);
+        popupContainer.appendChild(popupContentDiv);
+        popupContentDiv.appendChild(closeButton);
+
+        // body에 팝업 창을 추가합니다.
+        document.body.appendChild(popupContainer);
+
+        // 팝업 닫기 버튼에 클릭 이벤트를 추가합니다.
+        closeButton.addEventListener("click", function () {
+            document.body.removeChild(popupContainer);
+        });
+    }
+});
+</script>
 
 <%@ include file = "../includes/footer.jsp"%>

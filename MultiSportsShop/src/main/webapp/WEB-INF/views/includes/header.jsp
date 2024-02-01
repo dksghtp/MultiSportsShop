@@ -130,7 +130,7 @@
 					data-toggle="collapse" href="#navbar-vertical"
 					style="height: 65px; padding: 0 30px;">
 					<h6 class="text-dark m-0">
-						<i class="fa fa-bars mr-2"></i>Categories
+						<i class="fa fa-bars mr-2"></i>카테고리
 					</h6> <i class="fa fa-angle-down text-dark"></i>
 				</a>
 				<nav
@@ -140,24 +140,23 @@
 					<div class="navbar-nav w-100">
 						<div class="nav-item dropdown dropright">
 							<a href="#" class="nav-link dropdown-toggle"
-								data-toggle="dropdown">Dresses <i
+								data-toggle="dropdown">복장 <i
 								class="fa fa-angle-right float-right mt-1"></i></a>
 							<div
 								class="dropdown-menu position-absolute rounded-0 border-0 m-0">
-								<a href="" class="dropdown-item">Men's Dresses</a> <a href=""
-									class="dropdown-item">Women's Dresses</a> <a href=""
-									class="dropdown-item">Baby's Dresses</a>
+								<a href="" class="dropdown-item">남성복</a> <a href=""
+									class="dropdown-item">여성복</a> <a href="" class="dropdown-item">아동복</a>
 							</div>
 						</div>
-						<a href="" class="nav-item nav-link">Shirts</a> <a href=""
-							class="nav-item nav-link">Jeans</a> <a href=""
-							class="nav-item nav-link">Swimwear</a> <a href=""
-							class="nav-item nav-link">Sleepwear</a> <a href=""
-							class="nav-item nav-link">Sportswear</a> <a href=""
-							class="nav-item nav-link">Jumpsuits</a> <a href=""
-							class="nav-item nav-link">Blazers</a> <a href=""
-							class="nav-item nav-link">Jackets</a> <a href=""
-							class="nav-item nav-link">Shoes</a>
+						<a href="" class="nav-item nav-link">축구</a> <a href=""
+							class="nav-item nav-link">농구</a> <a href=""
+							class="nav-item nav-link">야구</a> <a href=""
+							class="nav-item nav-link">탁구</a> <a href=""
+							class="nav-item nav-link">골프</a> <a href=""
+							class="nav-item nav-link">테니스</a> <a href=""
+							class="nav-item nav-link">런닝</a> <a href=""
+							class="nav-item nav-link">수영</a> <a href=""
+							class="nav-item nav-link">배드민턴</a>
 					</div>
 				</nav>
 			</div>
